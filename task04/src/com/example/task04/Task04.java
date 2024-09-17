@@ -3,28 +3,28 @@ package com.example.task04;
 public class Task04 {
 
     public static float calculate(int a, int b, String operation) {
-        switch (operation) {
-            case "+":
-                return a + b;
-            case "-":
-                return a - b;
-            case "*":
-                return a * b;
-            case "/":
-                if (b == 0) {
-                    System.out.println("Возможно вы делите на 0"); //обрабатываем исключение при делении на 0
-                    return 0;
-                } else {
-                    return (float) a / b;
-                }
+
+        float result = 0;
+        if (operation == "+") {
+            result = a + b;
         }
-        return 0;
+        else if (operation == "-") {
+            result = a - b;
+        }
+        else if (operation == "*") {
+            result = a * b;
+        }
+        else if (operation == "/" && b != 0) {
+            result = (float) a / b;
+        }
+        else System.out.println("Возможно вы делите на 0");
+        return result;
     }
 
     public static void main(String[] args) {
         // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
-        float result = calculate(-36, 10, "/");
+        float result = calculate(-36, 5, "/");
         System.out.println(result);
     }
 
