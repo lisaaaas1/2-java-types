@@ -8,7 +8,7 @@ public class Task07 {
 
     public static void main(String[] args) {
 
-        int result = solution(10, 20, 5);
+        int result = solution(20, 50, 3);
         System.out.println(result);
 
     }
